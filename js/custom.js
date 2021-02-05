@@ -25,97 +25,112 @@ $(document).ready(function () {
 
 	*/
   $(function () {
-    $(".t-datepicker").tDatePicker({
-      // auto close after selection
-      autoClose: false,
+    $(".t-datepicker")
+      .tDatePicker({
+        // auto close after selection
+        autoClose: true,
 
-      //   // animation speed in milliseconds
-      //   durationArrowTop: 200,
+        //   // animation speed in milliseconds
+        //   durationArrowTop: 200,
 
-      //   // the number of calendars
-      //   numCalendar: 2,
+        //   // the number of calendars
+        //   numCalendar: 2,
 
-      // localization
-      titleCheckIn: "Check In",
-      titleCheckOut: "Check Out",
-      titleToday: "Today",
-      titleDateRange: "night",
-      titleDateRanges: "nights",
-      titleDays: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
-      titleMonths: [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "Septemper",
-        "October",
-        "November",
-        "December",
-      ],
+        // localization
+        titleCheckIn: "Check In",
+        titleCheckOut: "Check Out",
+        titleToday: "Today",
+        titleDateRange: "night",
+        titleDateRanges: "nights",
+        titleDays: ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
+        titleMonths: [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "Septemper",
+          "October",
+          "November",
+          "December",
+        ],
 
-      //   // the max length of the title
-      //   titleMonthsLimitShow: 3,
+        //   // the max length of the title
+        //   titleMonthsLimitShow: 3,
 
-      //   // replace moth names
-      //   replaceTitleMonths: null,
+        //   // replace moth names
+        //   replaceTitleMonths: null,
 
-      //   // e.g. 'dd-mm-yy'
-      //   showDateTheme: null,
+        //   // e.g. 'dd-mm-yy'
+        //   showDateTheme: null,
 
-      //   // icon options
-      //   iconArrowTop: true,
-      //   iconDate: "&#x279C;",
-      //   arrowPrev: "&#x276E;",
-      //   arrowNext: "&#x276F;",
-      //   // https://fontawesome.com/v4.7.0/icons/
-      //   // iconDate: '<i class="li-calendar-empty"></i><i class="li-arrow-right"></i>',
-      //   // arrowPrev: '<i class="fa fa-chevron-left"></i>',
-      //   // arrowNext: '<i class="fa fa-chevron-right"></i>',
+        //   // icon options
+        //   iconArrowTop: true,
+        //   iconDate: "&#x279C;",
+        //   arrowPrev: "&#x276E;",
+        //   arrowNext: "&#x276F;",
+        //   // https://fontawesome.com/v4.7.0/icons/
+        //   // iconDate: '<i class="li-calendar-empty"></i><i class="li-arrow-right"></i>',
+        //   // arrowPrev: '<i class="fa fa-chevron-left"></i>',
+        //   // arrowNext: '<i class="fa fa-chevron-right"></i>',
 
-      //   // shows today title
-      //   toDayShowTitle: true,
+        //   // shows today title
+        //   toDayShowTitle: true,
 
-      //   // showss dange range title
-      //   dateRangesShowTitle: true,
+        //   // showss dange range title
+        //   dateRangesShowTitle: true,
 
-      //   // highlights today
-      //   toDayHighlighted: false,
+        //   // highlights today
+        //   toDayHighlighted: false,
 
-      //   // highlights next day
-      //   nextDayHighlighted: false,
+        //   // highlights next day
+        //   nextDayHighlighted: false,
 
-      //   // an array of days
-      //   daysOfWeekHighlighted: [0, 6],
+        //   // an array of days
+        //   daysOfWeekHighlighted: [0, 6],
 
-      //   // custom date format
-      //   formatDate: "yyyy-mm-dd",
+        //   // custom date format
+        //   formatDate: "yyyy-mm-dd",
 
-      //   // dateCheckIn: '25/06/2018',  // DD/MM/YY
-      //   // dateCheckOut: '26/06/2018', // DD/MM/YY
-      //   dateCheckIn: null,
-      //   dateCheckOut: null,
-      //   startDate: null,
-      //   endDate: null,
+        //   // dateCheckIn: '25/06/2018',  // DD/MM/YY
+        //   // dateCheckOut: '26/06/2018', // DD/MM/YY
+        //   dateCheckIn: null,
+        //   dateCheckOut: null,
+        //   startDate: null,
+        //   endDate: null,
 
-      //   // limits the number of months
-      //   limitPrevMonth: 0,
-      //   limitNextMonth: 11,
+        //   // limits the number of months
+        //   limitPrevMonth: 0,
+        //   limitNextMonth: 11,
 
-      //   // limits the number of days
-      //   limitDateRanges: 31,
+        //   // limits the number of days
+        //   limitDateRanges: 31,
 
-      //   // true -> full days || false - 1 day
-      //   showFullDateRanges: false,
+        //   // true -> full days || false - 1 day
+        //   showFullDateRanges: false,
 
-      //   // DATA HOLIDAYS
-      //   // Data holidays
-      //   fnDataEvent: null,
-    });
+        //   // DATA HOLIDAYS
+        //   // Data holidays
+        //   fnDataEvent: null,
+      })
+      .on("afterCheckOut", function (e, dataDate) {
+        $("#adults_1").click(function () {
+          //do something here
+        });
+      });
   });
+
+  mapboxgl.accessToken =
+    "pk.eyJ1Ijoid2FoaWR6enoiLCJhIjoiY2trbDc2Y3M1MnZ5cDJub2NlMHl2cGY0ciJ9.128JeDyi9jpnww1jN2G1TA";
+  var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    types: "country,region,place,postcode,locality,neighborhood",
+  });
+
+  geocoder.addTo("#geocoder");
 
   var menu = $(".menu");
   var menuActive = false;

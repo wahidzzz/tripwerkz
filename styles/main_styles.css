@@ -229,8 +229,8 @@ section {
 }
 .button {
   display: inline-block;
-  height: 53px;
-  border-radius: 27px;
+  height: 48px;
+  border-radius: 5px;
   overflow: hidden;
 }
 .button_bcg {
@@ -402,6 +402,16 @@ section {
   height: 40px;
   padding-top: 7px;
   text-decoration: none;
+}
+.mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
+  padding: 4.9px;
+  box-shadow: none !important;
+}
+svg.mapboxgl-ctrl-geocoder--icon.mapboxgl-ctrl-geocoder--icon-search {
+  margin: 5px;
+}
+svg.mapboxgl-ctrl-geocoder--icon.mapboxgl-ctrl-geocoder--icon-close {
+  display: none;
 }
 /* .offers_price {
   margin-top: 8px;
@@ -957,7 +967,7 @@ section {
   padding-right: 15px;
   font-size: 13px;
   font-weight: 600;
-  color: #929191;
+  color: #030303;
   border-radius: 5px;
 }
 .search_item:first-child {
