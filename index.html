@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>TripWerkz</title>
+	<title>TripWerkz - Demo Website</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="TripWerkz Demo Test">
@@ -14,6 +14,8 @@
 	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
 	<link rel="stylesheet" href="styles/t-datepicker.min.css">
 	<link rel="stylesheet" href="styles/t-datepicker-purple.css">
 
@@ -292,9 +294,10 @@
 									</div>
 								</div>
 
-								<div class="t-datepicker" style="width: 30%;border-radius: 5px;
+								<div class="t-datepicker my-3" style="width: 30%;border-radius: 5px;
 								outline: none !important;
 								padding: .5rem;
+								padding-left: 0 !important;
 								color: black;">
 									<div class="search_item">
 										<div>Dates</div>
@@ -308,15 +311,15 @@
 								<div class="search_item">
 									<div>adults</div>
 									<select name="adults" id="adults_1" class="dropdown_item_select search_input">
-										<option>01</option>
-										<option>02</option>
-										<option>03</option>
-										<option>04</option>
-										<option>05</option>
-										<option>06</option>
-										<option>07</option>
-										<option>08</option>
-										<option>09</option>
+										<option value="01">01</option>
+										<option value="02">02</option>
+										<option value="03">03</option>
+										<option value="04">04</option>
+										<option value="05">05</option>
+										<option value="06">06</option>
+										<option value="07">07</option>
+										<option value="08">08</option>
+										<option value="09">09</option>
 									</select>
 								</div>
 								<div class="search_item">
@@ -1151,6 +1154,7 @@
 		src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
 
 	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	<script src="js/t-datepicker.min.js"></script>
 	<script src="styles/bootstrap4/popper.js"></script>
 	<script src="styles/bootstrap4/bootstrap.min.js"></script>

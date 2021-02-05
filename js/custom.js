@@ -23,7 +23,9 @@ $(document).ready(function () {
 
 	1. Vars and Inits
 
-	*/
+  */
+  $("#adults_1").select2();
+  $("#children_1").select2();
   $(function () {
     $(".t-datepicker")
       .tDatePicker({
@@ -117,8 +119,9 @@ $(document).ready(function () {
         //   fnDataEvent: null,
       })
       .on("afterCheckOut", function (e, dataDate) {
-        $("#adults_1").click(function () {
-          //do something here
+        $("#adults_1").select2("open").trigger("open");
+        $("#adults_1").on("select2:select", function (e) {
+          $("#children_1").select2("open").trigger("open");
         });
       });
   });
@@ -128,6 +131,11 @@ $(document).ready(function () {
   var geocoder = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
     types: "country,region,place,postcode,locality,neighborhood",
+    placeholder: "Enter Destination",
+  });
+  geocoder.on("result", function (e) {
+    // console.log("Selected");
+    $(".t-datepicker").tDatePicker("show");
   });
 
   geocoder.addTo("#geocoder");
