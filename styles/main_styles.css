@@ -421,6 +421,7 @@ section {
   -ms-transform: translateY(-6px);
   -o-transform: translateY(-6px);
   transform: translateY(-6px);
+  padding-top: 1.2rem;
 }
 .header.scrolled .logo_container {
   -webkit-transform: none;
@@ -957,6 +958,7 @@ section {
   font-size: 13px;
   font-weight: 600;
   color: #929191;
+  border-radius: 5px;
 }
 .search_item:first-child {
   width: 30.453%;
@@ -1441,7 +1443,7 @@ section {
   transition: all 200ms ease;
 }
 .offers_link a:hover {
-  color: #fa9e1b;
+  color: white;
 }
 
 /*********************************

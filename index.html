@@ -14,6 +14,8 @@
 	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+	<link rel="stylesheet" href="styles/t-datepicker.min.css">
+	<link rel="stylesheet" href="styles/t-datepicker-bluegrey.css">
 </head>
 
 <body>
@@ -240,7 +242,7 @@
 
 			<!-- Search Contents -->
 
-			<div class="container fill_height">
+			<div class=" container fill_height">
 				<div class="row fill_height">
 					<div class="col fill_height">
 
@@ -253,10 +255,6 @@
 									class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
 									<img src="images/suitcase.png" alt=""><span>hotels</span>
 								</div>
-								<!-- <div
-									class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-									<img src="images/bus.png" alt="">car rentals
-								</div> -->
 								<div
 									class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
 									<img src="images/departure.png" alt="">flights
@@ -265,10 +263,7 @@
 									class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
 									<img src="images/island.png" alt="">trips
 								</div>
-								<!-- <div
-									class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
-									<img src="images/cruise.png" alt="">cruises
-								</div> -->
+
 								<div
 									class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">
 									<img src="images/diving.png" alt="">activities
@@ -283,15 +278,23 @@
 								class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 								<div class="search_item">
 									<div>destination</div>
-									<input type="text" class="destination search_input" required="required">
+									<input type="text" class="destination search_input"
+										placeholder="Enter City or destination" required="required">
 								</div>
-								<div class="search_item">
-									<div>check in</div>
-									<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>check out</div>
-									<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
+
+								<div class="t-datepicker" style="width: 30%;border-radius: 5px;
+								outline: none !important;
+								padding: .5rem;
+								color: black;
+							">
+									<div class="search_item">
+										<div>Dates</div>
+									</div>
+									<div type="text" class="t-check-in" placeholder="DD-MM-YYYY"
+										style="background-color: white;"></div>
+
+									<div type="text" class="t-check-out" placeholder="DD-MM-YYYY"
+										style="background-color: white;"></div>
 								</div>
 								<div class="search_item">
 									<div>adults</div>
@@ -313,193 +316,7 @@
 							</form>
 						</div>
 
-						<!-- Search Panel -->
 
-						<div class="search_panel">
-							<form action="#" id="search_form_2"
-								class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-								<div class="search_item">
-									<div>destination</div>
-									<input type="text" class="destination search_input" required="required">
-								</div>
-								<div class="search_item">
-									<div>check in</div>
-									<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>check out</div>
-									<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>adults</div>
-									<select name="adults" id="adults_2" class="dropdown_item_select search_input">
-										<option>01</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<div class="search_item">
-									<div>children</div>
-									<select name="children" id="children_2" class="dropdown_item_select search_input">
-										<option>0</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<button class="button search_button">search</button>
-							</form>
-						</div>
-
-						<!-- Search Panel -->
-
-						<div class="search_panel">
-							<form action="#" id="search_form_3"
-								class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-								<div class="search_item">
-									<div>destination</div>
-									<input type="text" class="destination search_input" required="required">
-								</div>
-								<div class="search_item">
-									<div>check in</div>
-									<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>check out</div>
-									<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>adults</div>
-									<select name="adults" id="adults_3" class="dropdown_item_select search_input">
-										<option>01</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<div class="search_item">
-									<div>children</div>
-									<select name="children" id="children_3" class="dropdown_item_select search_input">
-										<option>0</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<button
-									class="button search_button">search<span></span><span></span><span></span></button>
-							</form>
-						</div>
-
-						<!-- Search Panel -->
-
-						<div class="search_panel">
-							<form action="#" id="search_form_4"
-								class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-								<div class="search_item">
-									<div>destination</div>
-									<input type="text" class="destination search_input" required="required">
-								</div>
-								<div class="search_item">
-									<div>check in</div>
-									<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>check out</div>
-									<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>adults</div>
-									<select name="adults" id="adults_4" class="dropdown_item_select search_input">
-										<option>01</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<div class="search_item">
-									<div>children</div>
-									<select name="children" id="children_4" class="dropdown_item_select search_input">
-										<option>0</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<button
-									class="button search_button">search<span></span><span></span><span></span></button>
-							</form>
-						</div>
-
-						<!-- Search Panel -->
-
-						<div class="search_panel">
-							<form action="#" id="search_form_5"
-								class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-								<div class="search_item">
-									<div>destination</div>
-									<input type="text" class="destination search_input" required="required">
-								</div>
-								<div class="search_item">
-									<div>check in</div>
-									<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>check out</div>
-									<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>adults</div>
-									<select name="adults" id="adults_5" class="dropdown_item_select search_input">
-										<option>01</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<div class="search_item">
-									<div>children</div>
-									<select name="children" id="children_5" class="dropdown_item_select search_input">
-										<option>0</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<button
-									class="button search_button">search<span></span><span></span><span></span></button>
-							</form>
-						</div>
-
-						<!-- Search Panel -->
-
-						<div class="search_panel">
-							<form action="#" id="search_form_6"
-								class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-								<div class="search_item">
-									<div>destination</div>
-									<input type="text" class="destination search_input" required="required">
-								</div>
-								<div class="search_item">
-									<div>check in</div>
-									<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>check out</div>
-									<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
-								</div>
-								<div class="search_item">
-									<div>adults</div>
-									<select name="adults" id="adults_6" class="dropdown_item_select search_input">
-										<option>01</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<div class="search_item">
-									<div>children</div>
-									<select name="children" id="children_6" class="dropdown_item_select search_input">
-										<option>0</option>
-										<option>02</option>
-										<option>03</option>
-									</select>
-								</div>
-								<button class="button search_button">search</button>
-							</form>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -1145,7 +962,7 @@
 				<div class="row">
 
 					<!-- Footer Column -->
-					<div style="margin-right: 50px;" class="col-lg-3 footer_column">
+					<div class="col-sm-4 pr-5 footer_column">
 						<div class="footer_col">
 							<div class="footer_content footer_about">
 								<div class="logo_container footer_logo">
@@ -1168,7 +985,7 @@
 					</div>
 
 					<!-- Footer Column -->
-					<div style="margin-right: -120px;" class="col-lg-3 footer_column">
+					<div class="col-sm-2 footer_column">
 						<div class="footer_col">
 							<div style="margin-bottom: 55px;" class="footer_title">About Us</div>
 							<div class="footer_content footer_blog">
@@ -1197,7 +1014,7 @@
 					</div>
 
 					<!-- Footer Column -->
-					<div style="margin-right: -90px;" class="col-lg-3 footer_column">
+					<div class="col-sm-2 footer_column">
 						<div class="footer_col">
 							<div style="margin-bottom: 56px;" class="footer_title">Terms of Use</div>
 							<div class="footer_content footer_tags">
@@ -1222,7 +1039,7 @@
 
 
 					<!-- Footer Column -->
-					<div style="margin-right: -125px;" class="col-lg-3 footer_column">
+					<div class="col-sm-2 footer_column">
 						<div class="footer_col">
 							<div style="margin-bottom: 56px;" class="footer_title">For You</div>
 							<div class="footer_content footer_contact">
@@ -1245,7 +1062,7 @@
 					</div>
 
 					<!-- Footer Column -->
-					<div class="col-lg-3 footer_column">
+					<div class="col-sm-2 footer_column">
 						<div class="footer_col">
 							<div style="margin-bottom: 56px;" class="footer_title">For Business</div>
 							<div class="footer_content footer_contact">
@@ -1289,7 +1106,7 @@
 		<div class="copyright">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-3 order-lg-1 order-2  ">
+					<div class="col-sm-4 order-lg-1 order-2  ">
 						<div class="copyright_content d-flex flex-row align-items-center">
 							<div>
 								Copyright ©
@@ -1298,7 +1115,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-9 order-lg-2 order-1">
+					<div class="col-sm-8 order-lg-2 order-1">
 						<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
 							<div class="footer_nav">
 								<ul class="footer_nav_list">
@@ -1316,6 +1133,7 @@
 	</div>
 
 	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/t-datepicker.min.js"></script>
 	<script src="styles/bootstrap4/popper.js"></script>
 	<script src="styles/bootstrap4/bootstrap.min.js"></script>
 	<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
